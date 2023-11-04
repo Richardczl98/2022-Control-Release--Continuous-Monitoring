@@ -1,0 +1,11 @@
+The project's code files are organized into four modules based on the processing order. Each module is stored in a separate folder:
+
+- [01_Preprocessing](./01_Preprocessing/): This module focuses on preprocessing the raw data of the project, including the real release dose data and reported event records. Its purpose is to prepare the data for further analysis. Please refer to the [README.md](./01_Preprocessing/README.md) file in this module for more details.
+
+- [02_FilterEvent](./02_FilterEvent/): This module is responsible for filtering true events based on wind speed using the wind transpose model. It identifies events that are likely to be actual methane leaks. Please refer to the [README.md](./02_FilterEvent/README.md) file in this module for more details.
+
+- [03_DetectionAnalysis](./03_DetectionAnalysis/): In this module, we perform detection analysis by constructing confusion matrices for both Stanford Defined Scenarios and Operator Defined Scenarios. This process helps evaluate the system's performance in accurately identifying true events. We also generate time-based confusion matrices to assess the temporal aspect of event detection. Please refer to the [README.md](./03_DetectionAnalysis/README.md) file in this module for more details.
+
+- [04_QuantificationAnalysis](./04_QuantificationAnalysis): The Quantification Analysis module focuses on the accuracy of emission volume estimates reported by the sensors. We use a linear regression model to compare the methane quantities reported by the sensors with the actual emission volumes. This analysis measures the precision of the sensors in estimating the volume of methane emissions.
+
+- [05_SensitivityAnalysis](./05_SensitivityAnalysis): This module conducts a sensitivity analysis on the outcomes derived from the 03_DetectionAnalysis module. It examines the variations in the Confusion Matrix metrics for both Event-based and Time-based analyses across different input parameters. These parameters include the threshold (1/2/4 times the experimental radius), ignore_duration (30/60/120 seconds), short_stack (0 or 1), and overlap (0 or 1). Please refer to the [README.md](./05_SensitivityAnalysis/README.md) file in this module for more details.

@@ -1,0 +1,25 @@
+The "results" directory is where the project stores the output results of different modules. Each module has its own corresponding folder within the "results" directory, and I will summarize the contents of each folder for you:
+
+- [03_DetectionAnalysis](./03_DetectionAnalysis/): This folder contains the output results of the "03_DetectionAnalysis" module. It includes event-based confusion matrices for both Stanford Defined Events and Team Defined Events.
+
+  - [Event-based ConfusionMatrix](./03_DetectionAnalysis/Event-based%20ConfusionMatrix/): This subfolder contains the calculated results of the event-based confusion matrices for both Stanford Defined Events and Team Defined Events.
+
+    - [Stanford Defined Events Confusion_Reliability](../results/03_DetectionAnalysis/Event-based%20ConfusionMatrix/Stanford%20Defined%20Events_Reliability/): This subfolder contains the True Positive Rate (TPR), Precision, False Negative Rate (FNR), and Negative Predictive Value (NPV) based on Stanford Defined Events. It also includes the relationship between Stanford Defined Events and Team Defined Events. The results are computed by the "event_based_confusion_matrix_stanford_defined_event.ipynb" module and stored in CSV format. The filenames follow a naming convention that provides information about the calculations, such as the inclusion of Short Stack considerations, the experiment radii factor, and the exclusion of transient events with durations below certain thresholds.
+
+    - [Team Defined Events_Reliability](../results/03_DetectionAnalysis/Event-based%20ConfusionMatrix/Team%20Defined%20Events_Reliability/): This subfolder contains the TPR, Precision, FNR, and NPV based on Team Defined Events, along with the matching relationship between Stanford Defined Events and Team Defined Events. These results are computed by the "event_based_confusion_matrix_team_defined_event.ipynb" module and stored in CSV format, following the same naming convention as the Stanford Defined Events results.
+
+  - [Time-based Confusion Matrix](../results/03_DetectionAnalysis/Time-based%20ConfusionMatrix/): This subfolder contains the Confusion Matrix metrics based on the time series of Stanford Defined Events and Team Defined Events. The calculations are performed by the "time_based_confusion_matrix.ipynb" module. The filenames provide information about the inclusion of Short Stack considerations, the experiment radii factor, the exclusion of transient events, and the consideration of shared reporting intervals among sensors.
+
+  - [Test-case Matching Data](./03_DetectionAnalysis/Test-case%20Matching%20Data/): This subfolder serves as a repository for intermediate outcomes of Event-based Confusion Matrices. It contains valuable information such as event correspondence and classification criteria for Stanford Defined Events and Team Defined Events, as well as matching figures per day showcasing the interplay of events and their categorizations. It includes subdirectories for Stanford Defined Events, Team Defined Events, and Matching Figures per Day, each with its own set of files in CSV or JPG format, following a naming convention that provides details about the calculations, experiment radii factor, exclusion of transient events, and sensor involvement.
+
+- [04_QuantificationAnalysis](./04_QuantificationAnalysis/): This folder contains the output results of the "04_QuantificationAnalysis" module, including linear regression plots.
+
+  - [LinearRegression Stanford Defined](./04_QuantificationAnalysis/Uniform%20Size/LinearRegression%20Stanford%20Defined%20Events/): This subfolder contains the linear regression plots for Stanford Defined Events. Each image is named based on the inclusion of Short Stack considerations, the experiment radii factor, the exclusion of transient events, and the sensor involved.
+
+  - [LinearRegression_Team_Defined](./04_QuantificationAnalysis/Uniform%20Size/LinearRegression%20Team%20Defined/): This subfolder contains the linear regression plots for Team Defined Events. The filenames follow the same naming convention as the Stanford Defined Events plots.
+
+- [05_SensitivityAnalysis](./05_SensitivityAnalysis/): This folder contains the output results of the "05_SensitivityAnalysis" module, specifically for Event-based and Time-based Difference Analysis.
+
+  - [Event-based Difference Analysis](./05_SensitivityAnalysis/Event-based%20Difference%20Analysis/): This subfolder includes sensitivity analysis results for Reliability, TPR, precision, TNR, and NPV for Event-based scenarios. The results are stored in CSV files named after the sensor involved.
+
+  - [Time-based Difference Analysis](./05_SensitivityAnalysis/Time-based%20Difference%20Analysis/): This subfolder contains CSV files named after the sensor involved, providing sensitivity analysis results for Time-based scenarios, similar to the Event-based Difference Analysis.
